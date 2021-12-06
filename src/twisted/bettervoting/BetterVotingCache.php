@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace twisted\bettervoting;
@@ -7,7 +8,7 @@ use pocketmine\item\Item;
 use pocketmine\Player;
 use function in_array;
 
-class BetterVotingCache{
+class BetterVotingCache {
 
 	public const TIME_BETWEEN_CACHE_UPDATE = 3 * 60;
 
@@ -34,7 +35,7 @@ class BetterVotingCache{
 	 *
 	 * @return array
 	 */
-	public static function getServerInfo() : array{
+	public static function getServerInfo() : array {
 		return self::$serverInfo;
 	}
 
@@ -44,7 +45,7 @@ class BetterVotingCache{
 	 *
 	 * @param array $serverInfo
 	 */
-	public static function setServerInfo(array $serverInfo) : void{
+	public static function setServerInfo(array $serverInfo) : void {
 		self::$serverInfo = $serverInfo;
 	}
 
@@ -54,7 +55,7 @@ class BetterVotingCache{
 	 *
 	 * @return int[]
 	 */
-	public static function getTopVoters() : array{
+	public static function getTopVoters() : array {
 		return self::$topVoters;
 	}
 
@@ -64,7 +65,7 @@ class BetterVotingCache{
 	 *
 	 * @param int[] $topVoters
 	 */
-	public static function setTopVoters(array $topVoters) : void{
+	public static function setTopVoters(array $topVoters) : void {
 		self::$topVoters = $topVoters;
 	}
 
@@ -74,7 +75,7 @@ class BetterVotingCache{
 	 *
 	 * @return array string[]
 	 */
-	public static function getUnclaimedVotes() : array{
+	public static function getUnclaimedVotes() : array {
 		return self::$unclaimedVotes;
 	}
 
@@ -87,7 +88,7 @@ class BetterVotingCache{
 	 *
 	 * @return bool
 	 */
-	public static function hasUnclaimedVote(Player $player) : bool{
+	public static function hasUnclaimedVote(Player $player) : bool {
 		return in_array($player->getName(), self::$unclaimedVotes);
 	}
 
@@ -97,7 +98,7 @@ class BetterVotingCache{
 	 *
 	 * @param string[] $unclaimedVotes
 	 */
-	public static function setUnclaimedVotes(array $unclaimedVotes) : void{
+	public static function setUnclaimedVotes(array $unclaimedVotes) : void {
 		self::$unclaimedVotes = $unclaimedVotes;
 	}
 
@@ -107,7 +108,7 @@ class BetterVotingCache{
 	 *
 	 * @return string[]
 	 */
-	public static function getCommands() : array{
+	public static function getCommands() : array {
 		return self::$commands;
 	}
 
@@ -117,7 +118,7 @@ class BetterVotingCache{
 	 *
 	 * @param string[] $commands
 	 */
-	public static function setCommands(array $commands) : void{
+	public static function setCommands(array $commands) : void {
 		self::$commands = $commands;
 	}
 
@@ -127,7 +128,7 @@ class BetterVotingCache{
 	 *
 	 * @return Item[]
 	 */
-	public static function getItems() : array{
+	public static function getItems() : array {
 		return self::$items;
 	}
 
@@ -137,7 +138,8 @@ class BetterVotingCache{
 	 *
 	 * @param Item[] $items
 	 */
-	public static function setItems(array $items) : void{
+	public static function setItems(array $items) : void {
 		self::$items = $items;
 	}
+
 }
